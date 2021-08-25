@@ -10,6 +10,18 @@ factor a be *33*, the number of modulo bases *N* be *3*, the modulo base *B = {b
 
 ## Function
 Our blind computing library implements common operations such as addition, subtraction, multiplication, division and power operation。***blind frame difference.cpp*** is a demo,The background difference method is suitable for the foreground extraction of video with relatively static background and no great change. The default background of the background difference method is unchanged, and the foreground is extracted after the fixed background frame is set. In this method, when extracting the foreground of a frame, the difference operation is performed between the frame and the pre stored background frame to obtain the differential gray image, and then the threshold judgment is carried out to extract the moving target.
+## Performence
+|               | our library(ms)  |  IBM HElib(ms)  |   Microsoft SEALs(ms) | HEAAN v1.1(ms)| HEAAN v2.1(ms) |
+| --------   | :-----:                 | :----:                  | :-----:                           | :----:                    |:-----:                    |
+| Encrypt  | 140                    |   4909                | 25439                         |2771                      |2720                   |
+| A series of blind calculations| 52     |   9575  |2980|2022|1729|
+| Decrypt  | 243                   |  1813   |1480|437|387|
+
+|               | our library(kb)  |  IBM HElib(kb)  |   Microsoft SEALs(kb) | HEAAN v1.1(kb)| HEAAN v2.1(kb) |
+| --------   | :-----:                 | :----:                  | :-----:                           | :----:                    |:-----:                    |
+| Encrypt  | 553                 |  13566              |210032                  |185076                 |198520                |
+| A series of blind calculations| 1581 |   40071 229772|221988|227256|
+| Decrypt  | 2155        |  40702 |219772|221988|227320|
 ## Environment
 The project code needs to run on ***OpenCV, cryptopp565*** and ***miracl*** libraries，you can get them by clicking [here](https://pan.baidu.com/s/1zEkdfzsscyeBIaiGealjCw)
 ,password：bu7c.
